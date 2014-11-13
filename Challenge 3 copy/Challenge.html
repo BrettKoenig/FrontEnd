@@ -1,0 +1,123 @@
+<html> 
+<body> 
+<script type="text/javascript">
+setTimeout("printHeader ()", 0);
+setTimeout("dropDownSelect ()", 0);
+setTimeout("printParagraph1 ()", 500);
+setTimeout("printParagraph2 ()", 1000);
+setTimeout("printParagraph3 ()", 1500);
+setTimeout("printParagraph4 ()", 2000);
+setTimeout("printParagraph5 ()", 2500);
+setTimeout("printParagraph6 ()", 3000);
+function printHeader ()
+{
+document.write("<h1>");
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" />"); 
+document.write("Hello World!"); 
+document.write("</h1>");
+}
+function dropDownSelect()
+{
+dropDownOne();
+dropDownTwo();
+var whichParagraph = document.getElementById("paragraphs");
+var selectedParagraph = whichParagraph.options[whichParagraph.selectedIndex].text;
+var whichColor = document.getElementById("colors");
+var selectedColor = whichColor.options[whichColor.selectedIndex].text;
+document.write("<form action=\"../\">");
+document.write("<input type=\"BUTTON\"");
+document.write("value=\"Apply\"");
+document.write("onclick= userSelection()>");
+document.write("</form>");
+}
+function dropDownOne ()
+{
+document.write("<form action=\"\">");
+document.write("<select name=\"paragraphs\" id=\"paragraphs\">");
+document.write("<option value=\"ParagraphOne\">Paragraph 1</option>");
+document.write("<option value=\"ParagraphTwo\">Paragraph 2</option>");
+document.write("<option value=\"ParagraphThree\">Paragraph 3</option>");
+document.write("<option value=\"ParagraphFour\">Paragraph 4</option>");
+document.write("<option value=\"ParagraphFive\">Paragraph 5</option>");
+document.write("<option value=\"ParagraphSix\">Paragraph 6</option>");
+document.write("</select>");
+document.write("</form>");
+}
+function dropDownTwo ()
+{
+document.write("<form action=\"\">");
+document.write("<select name=\"colors\" id=\"colors\">");
+document.write("<option value=\"Red\">Red</option>");
+document.write("<option value=\"Orange\">Orange</option>");
+document.write("<option value=\"Yellow\">Yellow</option>");
+document.write("<option value=\"Green\">Green</option>");
+document.write("<option value=\"Blue\">Blue</option>");
+document.write("<option value=\"Violet\">Violet</option>");
+document.write("</select>");
+document.write("</form>");
+}
+function printParagraph1 ()
+{
+document.write("<p>"); 
+document.write("<p1 id=\"Paragraph 1\">"); 
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" />"); 
+document.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo ipsum, blandit ac tempor id, ullamcorper at purus. Morbi a lacus dolor, id volutpat neque. In ac porta justo. Aenean quis quam eget sapien lacinia aliquet. Vivamus dui metus, venenatis et adipiscing eu, mollis a nunc. Fusce ut ipsum id sapien faucibus egestas et posuere odio. Morbi vel elit mauris. Vestibulum sed sem massa. Fusce luctus ultrices arcu non mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."); 
+document.write("</p1>"); 
+document.write("</p>");
+}
+function printParagraph2 ()
+{
+document.write("<p>"); 
+document.write("<p2 id=\"Paragraph 2\">"); 
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" />"); 
+document.write("Mauris semper tempus ante ut egestas. Nunc euismod rutrum nibh, in posuere magna dapibus vitae. Sed non dui enim, id luctus nisi. Mauris vitae nisi nisl. Ut tincidunt, ligula nec faucibus sodales, quam elit rutrum risus, eu laoreet sapien lorem at arcu. Curabitur nibh arcu, facilisis ac convallis eu, aliquet a magna. Integer imperdiet eros a augue imperdiet eget lacinia ligula placerat. Fusce elementum tristique libero eget aliquam. Aenean porttitor, nunc tristique eleifend tincidunt, sapien tellus convallis orci, id pretium tortor tortor non justo. Cras a nulla dui, vehicula congue quam. Aenean quis ligula vitae lectus dignissim sodales ac sit amet eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque porta lobortis libero, vitae ultricies quam convallis non. Quisque erat nibh, iaculis in venenatis consequat, dictum sit amet justo. Duis a erat sed est sodales porta eget sed lorem. Fusce ullamcorper risus sit amet nibh interdum eget placerat urna tempor."); 
+document.write("</p2>"); 
+document.write("</p>");
+}
+function printParagraph3 ()
+{
+document.write("<p>"); 
+document.write("<p3 id=\"Paragraph 3\">"); 
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" />"); 
+document.write("Phasellus sit amet eros ornare mauris gravida interdum. Sed varius nulla luctus enim consectetur lacinia. Nulla mollis est sed orci sollicitudin varius. Vestibulum tellus tortor, ultricies ut hendrerit ut, viverra vel nisi. Sed nec justo vel tellus sodales tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, purus sit amet mollis gravida, felis purus sagittis nulla, eu tempus urna elit vitae sapien. Aenean ut turpis a enim consectetur placerat rutrum ac diam. Phasellus imperdiet nibh ac nisl ullamcorper in tempor ligula malesuada. Fusce dui arcu, accumsan id consequat non, ultricies sit amet dolor. Fusce tincidunt fringilla facilisis. Etiam nunc justo, facilisis nec vehicula sit amet, sollicitudin eu nulla."); 
+document.write("</p3>"); 
+document.write("</p>");
+}
+function printParagraph4 ()
+{
+document.write("<p>"); 
+document.write("<p4 id=\"Paragraph 4\">"); 
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" />"); 
+document.write("Suspendisse sollicitudin dignissim nunc eget semper. Sed lacinia pharetra erat. Donec sit amet diam erat, eget dignissim leo. Cras vestibulum commodo orci quis aliquam. Donec aliquam mauris sed sapien bibendum vel tincidunt nunc ullamcorper. Aenean nulla lorem, viverra vitae viverra vitae, rutrum sed erat. Aenean nunc purus, dapibus id placerat non, convallis vitae risus. Suspendisse sodales lacus eu eros semper quis semper turpis sodales. Donec id neque mauris, sit amet luctus dui. Proin mollis ullamcorper risus, sit amet eleifend tortor iaculis ut. Cras eget tortor vitae ante porttitor vestibulum. Proin consectetur, nunc in luctus elementum, eros leo sodales mauris, et suscipit enim lectus eu mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse dapibus elementum odio sed pharetra. Aenean pretium vehicula iaculis. Fusce non massa ipsum."); 
+document.write("</p4>"); 
+document.write("</p>");
+}
+function printParagraph5 ()
+{
+document.write("<p>"); 
+document.write("<p5 id=\"Paragraph 5\">"); 
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" />"); 
+document.write("Fusce sagittis lobortis mauris, sed rhoncus nisl ornare nec. Donec arcu diam, rutrum sit amet lacinia in, viverra eget nulla. Curabitur commodo fringilla odio et ultricies. Donec eu dolor odio. Vestibulum in augue ut neque vulputate lobortis eget nec arcu. Nam consectetur elit vel nibh tempor pulvinar. Praesent vel sapien libero, quis volutpat mi."); 
+document.write("</p5>"); 
+document.write("</p>");
+}
+function printParagraph6 ()
+{
+document.write("<p>"); 
+document.write("<p6 id=\"Paragraph 6\">"); 
+document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"Challenge_3.css\" /> ");
+document.write("Phasellus nunc lectus, laoreet eu tristique id, volutpat sed metus. Phasellus tristique accumsan lacinia. Mauris fermentum rhoncus tellus eu tristique. Vestibulum commodo auctor mi, nec laoreet nisl mattis a. Fusce volutpat aliquet justo sit amet gravida. Aenean sed risus ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sit amet dui quis odio adipiscing euismod et vel felis. Morbi nunc sem, ultricies euismod pretium non, fermentum et felis. Praesent sed metus sit amet quam dapibus imperdiet ac vitae eros. Aliquam et tortor mi.");
+document.write("</p6>"); 
+document.write("</p>");
+}
+function userSelection ()
+{
+var whichParagraph = document.getElementById("paragraphs");
+var selectedParagraph = whichParagraph.options[whichParagraph.selectedIndex].text;
+var whichColor = document.getElementById("colors");
+var selectedColor = whichColor.options[whichColor.selectedIndex].text;
+document.getElementById(selectedParagraph).style.color = selectedColor;
+}
+</script>
+</body> 
+</html>

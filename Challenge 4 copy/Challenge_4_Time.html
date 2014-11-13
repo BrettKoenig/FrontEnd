@@ -1,0 +1,187 @@
+
+<html>
+<head>
+    <title>Challenge 4</title>
+    <link rel="stylesheet" type="text/css" href="Challenge_4.css" /> 
+    <script src="jquery.js" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Challenge_4.css" /> 
+       <script type="text/javascript">
+              jQuery(document).ready(function () {
+                setTimeout('printOne ()', 0);
+              	setTimeout('printTwo ()', 500);
+              	setTimeout('printThree ()', 1000);
+              	setTimeout('printFour ()',1500);
+              	setTimeout('printFive ()', 2000);
+                setTimeout('printSix ()', 2500);
+                     $("#ApplyButton").click(function () {
+
+                           var color = $("#ColorSelector option:selected").val();
+ 						   var para = $("#PSelect option:selected").val();
+                           ChangeColor(para, color);
+                     });
+                     $('p1').bind('click', function () {
+                     $("#PSelect").val("#Paragraph1");
+                     });
+                     $('p2').bind('click', function () {
+                     $("#PSelect").val("#Paragraph2");
+                     });
+                     $('p3').bind('click', function () {
+                     $("#PSelect").val("#Paragraph3");
+                     });
+                     $('p4').bind('click', function () {
+                     $("#PSelect").val("#Paragraph4");
+                     });
+                     $('p5').bind('click', function () {
+                     $("#PSelect").val("#Paragraph5");
+                     });
+                     $('p6').bind('click', function () {
+                     $("#PSelect").val("#Paragraph6");
+                     });
+                     $('#BIG').bind('click', positionOfClick)
+              });
+              
+              function positionOfClick (event)
+              {
+              var PosX=(event.screenX);
+              var PosY=(event.screenY);
+              $("#dialog").dialog();
+              $("#ColorSelector4").change(function (){
+              var color = $("#ColorSelector4 option:selected").val();
+              var para = $("#PSelect option:selected").val();
+              ChangeColor(para, color);
+              $("#dialog").click(function () {
+              $("#dialog").hide();
+              });
+            });
+            
+              }
+              
+
+              function ChangeColor(para, color) {
+                     $(para).css("color", color);
+                     
+              }
+              function printOne ()
+              {
+              $('p1').show();
+              }
+              function printTwo ()
+              {
+              $('p2').show();
+              }
+              function printThree ()
+              {
+              $('p3').show();
+              }
+              function printFour ()
+              {
+              $('p4').show();
+              }
+              function printFive ()
+              {
+              $('p5').show();
+              }
+              function printSix ()
+              {
+              $('p6').show();
+              }
+
+       </script>
+
+ 
+</head>
+<body>
+
+    <div class="page">
+    <div id="dialog" title="Colors" style="display:none;">                 
+     <select id="ColorSelector4">
+     					   <option>Select One</option>
+                           <option value="Red">Red</option>
+                           <option value="Orange">Orange</option>
+                           <option value="Yellow">Yellow</option>
+                           <option value="Green">Green</option>
+                           <option value="Blue">Blue</option>
+                           <option value="Violet">Violet</option>
+                     </select>
+        </div>
+    	<div>
+    			 <h1> 
+ 				 Hello World! 
+ 				 </h1> 
+ 	    </div>
+ 	    	 <div>
+                     <select id="PSelect">
+                           <option value="#Paragraph1">Paragraph 1</option>
+                           <option value="#Paragraph2">Paragraph 2</option>
+                           <option value="#Paragraph3">Paragraph 3</option>
+                           <option value="#Paragraph4">Paragraph 4</option>
+                           <option value="#Paragraph5">Paragraph 5</option>
+                           <option value="#Paragraph6">Paragraph 6</option>
+                     </select>
+              </div>
+
+            <div>
+                     <select id="ColorSelector">
+                           <option value="Red">Red</option>
+                           <option value="Orange">Orange</option>
+                           <option value="Yellow">Yellow</option>
+                           <option value="Green">Green</option>
+                           <option value="Blue">Blue</option>
+                           <option value="Violet">Violet</option>
+                     </select>
+              </div>
+              <div>
+              			 <button id="ApplyButton" type="button">
+ 						 Apply
+ 						 </button>
+ 			  </div>
+ 			  <div id="BIG">
+ 			  <div id="Div1">
+ 			  <p>
+              <p1 id="Paragraph1">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo ipsum, blandit ac tempor id, ullamcorper at purus. Morbi a lacus dolor, id volutpat neque. In ac porta justo. Aenean quis quam eget sapien lacinia aliquet. Vivamus dui metus, venenatis et adipiscing eu, mollis a nunc. Fusce ut ipsum id sapien faucibus egestas et posuere odio. Morbi vel elit mauris. Vestibulum sed sem massa. Fusce luctus ultrices arcu non mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+              </p1>
+              </p>
+              </div>
+              <div id="Div2">
+              <p>
+              <p2 id="Paragraph2">
+              		 Mauris semper tempus ante ut egestas. Nunc euismod rutrum nibh, in posuere magna dapibus vitae. Sed non dui enim, id luctus nisi. Mauris vitae nisi nisl. Ut tincidunt, ligula nec faucibus sodales, quam elit rutrum risus, eu laoreet sapien lorem at arcu. Curabitur nibh arcu, facilisis ac convallis eu, aliquet a magna. Integer imperdiet eros a augue imperdiet eget lacinia ligula placerat. Fusce elementum tristique libero eget aliquam. Aenean porttitor, nunc tristique eleifend tincidunt, sapien tellus convallis orci, id pretium tortor tortor non justo. Cras a nulla dui, vehicula congue quam. Aenean quis ligula vitae lectus dignissim sodales ac sit amet eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque porta lobortis libero, vitae ultricies quam convallis non. Quisque erat nibh, iaculis in venenatis consequat, dictum sit amet justo. Duis a erat sed est sodales porta eget sed lorem. Fusce ullamcorper risus sit amet nibh interdum eget placerat urna tempor. 
+              </p2>
+              </p>
+              </div>
+              <div id="Div3">
+              <p>
+              <p3 id="Paragraph3">
+              		  Phasellus sit amet eros ornare mauris gravida interdum. Sed varius nulla luctus enim consectetur lacinia. Nulla mollis est sed orci sollicitudin varius. Vestibulum tellus tortor, ultricies ut hendrerit ut, viverra vel nisi. Sed nec justo vel tellus sodales tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, purus sit amet mollis gravida, felis purus sagittis nulla, eu tempus urna elit vitae sapien. Aenean ut turpis a enim consectetur placerat rutrum ac diam. Phasellus imperdiet nibh ac nisl ullamcorper in tempor ligula malesuada. Fusce dui arcu, accumsan id consequat non, ultricies sit amet dolor. Fusce tincidunt fringilla facilisis. Etiam nunc justo, facilisis nec vehicula sit amet, sollicitudin eu nulla. 
+              </p3>
+              </p>
+              </div>
+              <div id="Div4">
+              <p>
+              <p4 id="Paragraph4">
+              	      Suspendisse sollicitudin dignissim nunc eget semper. Sed lacinia pharetra erat. Donec sit amet diam erat, eget dignissim leo. Cras vestibulum commodo orci quis aliquam. Donec aliquam mauris sed sapien bibendum vel tincidunt nunc ullamcorper. Aenean nulla lorem, viverra vitae viverra vitae, rutrum sed erat. Aenean nunc purus, dapibus id placerat non, convallis vitae risus. Suspendisse sodales lacus eu eros semper quis semper turpis sodales. Donec id neque mauris, sit amet luctus dui. Proin mollis ullamcorper risus, sit amet eleifend tortor iaculis ut. Cras eget tortor vitae ante porttitor vestibulum. Proin consectetur, nunc in luctus elementum, eros leo sodales mauris, et suscipit enim lectus eu mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse dapibus elementum odio sed pharetra. Aenean pretium vehicula iaculis. Fusce non massa ipsum. 
+              </p4>
+              </p>
+              </div>
+              <div id="Div5">
+              <p>
+              <p5 id="Paragraph5">
+                      Fusce sagittis lobortis mauris, sed rhoncus nisl ornare nec. Donec arcu diam, rutrum sit amet lacinia in, viverra eget nulla. Curabitur commodo fringilla odio et ultricies. Donec eu dolor odio. Vestibulum in augue ut neque vulputate lobortis eget nec arcu. Nam consectetur elit vel nibh tempor pulvinar. Praesent vel sapien libero, quis volutpat mi. 
+              </p5>
+              </p>
+              </div>
+              <div id="Div2">
+              <p>
+              <p6 id="Paragraph6">
+              		   Phasellus nunc lectus, laoreet eu tristique id, volutpat sed metus. Phasellus tristique accumsan lacinia. Mauris fermentum rhoncus tellus eu tristique. Vestibulum commodo auctor mi, nec laoreet nisl mattis a. Fusce volutpat aliquet justo sit amet gravida. Aenean sed risus ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sit amet dui quis odio adipiscing euismod et vel felis. Morbi nunc sem, ultricies euismod pretium non, fermentum et felis. Praesent sed metus sit amet quam dapibus imperdiet ac vitae eros. Aliquam et tortor mi. 
+              </p6>
+              </p>
+              <div>
+    </div>
+
+</body>
+</html>
